@@ -13,7 +13,7 @@ async def send_welcome(message: types.Message):
     await message.reply(f'вас приветствует {bot_name.first_name}')
 @dp.message_handler(commands=['help'])
 async def help_p(message: types.Message):
-    await message.answer(' /my_info \n /download_photo \n /show_movies \n /send_my_info')
+    await message.answer('/my_info \n/download_photo\n/show_movies\n/send_my_info')
 @dp.message_handler(commands=['download_photo'])
 async def photo(message: types.Message):
     photos = await bot.get_user_profile_photos(message.from_user.id)
